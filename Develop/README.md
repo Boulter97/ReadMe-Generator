@@ -1,8 +1,8 @@
 
-  # practise
+  # Readme Generator
 
   ## Description
-  practise
+  This project was to create a Professional readme generator completely through the backend and demonstrate how it orks 
 
   ## Table of Contents
   - [Istallation](#installation)
@@ -13,10 +13,10 @@
   - [Questions](#questions)
 
   ## Installation
-  trial
+  Follow the instructions provided
 
   ## Usage 
-  learning
+  to create a professional readme file
 
   ## License
   undefined
