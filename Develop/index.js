@@ -1,6 +1,7 @@
 const fs = require ('fs');
-const inquirer = require('requirer');
-const generateMarkdown = require ('./generateMarkdown');
+const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 const questions = [
     { type: 'input',
@@ -9,37 +10,37 @@ const questions = [
     },
 
     { type: 'input',
-      name: 'title',
-      message: 'What is your decription for your project?',
+      name: 'description',
+      message: 'What is your description for your project?',
     },
 
     { type: 'input',
-      name: 'title',
+      name: 'table of contents',
       message: 'input your table of contents',
     },
     { type: 'input',
-      name: 'title',
+      name: 'installation',
       message: 'how do you install/run your project?',
     },
     { type: 'input',
-      name: 'title',
+      name: 'usage',
     message: 'What is the use of this project?',
     },
     { type: 'input',
-      name: 'title',
+      name: 'license',
       message: 'Choose a licence for your project',
     },
     { type: 'input',
-      name: 'title',
+      name: 'contributors',
       message: 'Who has contributed to this project?',
     },
     { type: 'input',
-      name: 'title',
+      name: 'testing',
       message: 'how do you test your project?',
     },
 
     { type: 'input',
-      name: 'title',
+      name: 'questions',
       message: 'common questions about your project?',
     },
 ];
@@ -47,9 +48,13 @@ const questions = [
 
 
 function writeToFile(fileName, data) {
-fs.writeFile(fileName, data, (err) =>
-err ? console.error(err) : console.log('README.md file generated')
-);
+fs.writeFile(fileName, data, (err) => {
+   if (err) {
+    console.error(err);
+ } else {
+    console.log('README.md file generated');
+ } 
+});
 }
 
 // TODO: Create a function to initialize app
